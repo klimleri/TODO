@@ -1,0 +1,59 @@
+.Header {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    border-top: 1px solid #737373;
+    border-bottom: 1px solid #737373;
+}
+.Inner {
+    padding: 10px 0;
+}
+.Inner.status {
+    padding: 0;
+}
+.status, .created {
+    width: 20%;
+}
+.Row {
+    display: flex;
+    align-items: center;
+}
+.Item {
+    border-bottom: 1px solid #737373;
+}
+.title {
+    flex-grow: 1;
+    border-left: 1px solid #737373;
+    border-right: 1px solid #737373;
+}
+.Item .status.new :global(.MuiInput-root) {
+    color: #448fda;
+}
+.Item .status.inProgress :global(.MuiInput-root) {
+    color: #ff9800;
+}
+.Item .status.done :global(.MuiInput-root) {
+    color: #009688;
+}
+.Item .status :global(.MuiInput-root) {
+    font-weight: bold;
+    text-transform: capitalize;
+    cursor: pointer;
+    width: 100%;
+}
+.Item :global(.MuiFormControl-root ){
+    width: 100%;
+    display: block;
+}
+.Item :global(.MuiInput-underline:before), .Item :global(.MuiInput-underline:after), .Item :global(.MuiSelect-icon) {
+    display: none;
+}
+.Item :global(.MuiSelect-select) {
+    padding: 10px 0;
+}
+.Item :global(.MuiSelect-select option) {
+    color: #000000;
+}
+.Item :global(.MuiSelect-select:focus) {
+    background-color: transparent;
+}
